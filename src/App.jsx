@@ -1,5 +1,6 @@
 
 import './App.css'
+import CounterComponent from './CounterComponent';
 import useFetchData from './useFetchData';
 
 function App() {
@@ -12,7 +13,10 @@ function App() {
     return <p>something went wrong</p>
   }
   return (
-  <div>{data.map((d, i) => <div key={i} >{d.title}</div>)}</div>
+  <div>
+    <CounterComponent />
+    {data.map((d, i) => <div key={i} >{d.title}</div>)}
+    </div>
   )
 }
 
